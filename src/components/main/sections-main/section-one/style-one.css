@@ -1,0 +1,33 @@
+.section-one{
+    display: flex;
+    background-image: url("../../../../../public/fondo.webp");
+    height: 100vh;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    background-position: center;
+    background-size: cover;
+    padding: 10% 0px;
+    color: white;
+
+    -webkit-box-shadow: inset 0px -139px 32px -7px rgba(0,0,0,0.83);
+    -moz-box-shadow: inset 0px -139px 32px -7px rgba(0,0,0,0.83);
+    box-shadow: inset 0px -139px 32px -7px rgba(0,0,0,0.83);
+}
+
+.section-one h2{
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+}
+
+.btn_section-one{
+    font-size: 1.4rem;
+    border-radius: 50px;
+    padding: 13px 20px;
+    background: rgb(150, 96, 50);
+    color: white;
+    font-weight: 600;
+    border: 1px solid rgb(136, 87, 45);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
