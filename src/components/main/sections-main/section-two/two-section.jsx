@@ -1,51 +1,18 @@
 import "./style-two.css";
-import homeInterior from "../../../../assets/interiorcasa.webp";
-import modularKitchen from "../../../../assets/cocinamodular.jpg";
-import modularForniture from "../../../../assets/forniture.jpg";
-import modularDecoration from "../../../../assets/decoracion.webp";
+import { useInView } from "react-intersection-observer";
+import ContainerImg from "./containerImg.jsx";
+import ContainerArticles from "./containerArticles.jsx";
 const TwoSection = () => {
+    // Hook de intersection observer
+    const { ref, inView } = useInView({
+      triggerOnce: true, // Solo activa la animación una vez
+      threshold: 0.2, // El 20% del contenedor debe estar visible para activar la animación
+    });
   return (
-    <section id="twoSectionId" className="two-section">
-      <div className="div_container-articles">
-        <article>
-          <h3>5k</h3>
-          <p>Completed proyects</p>
-        </article>
-        <article>
-          <h3>20</h3>
-          <p>Years of works</p>
-        </article>
-        <article>
-          <h3>9k</h3>
-          <p>Satisfied clients</p>
-        </article>
-        <article>
-          <h3>99%</h3>
-          <p>Happy rate</p>
-        </article>
-      </div>
-      <div className="div_container-images">
-        <div className="div_cards-image">
-          <img src={homeInterior} alt="" />
-          <p>Full Home Interiors</p>
-          <div className="shadow"></div>
-        </div>
-        <div className="div_cards-image">
-          <img src={modularKitchen} alt="" />
-          <p>Modular Kitchen</p>
-          <div className="shadow"></div>
-        </div>
-        <div className="div_cards-image">
-          <img src={modularForniture} alt="" />
-          <p>Modular Furniture</p>
-          <div className="shadow"></div>
-        </div>
-        <div className="div_cards-image">
-          <img src={modularDecoration} alt="" />
-          <p>Furniture & decor</p>
-          <div className="shadow"></div>
-        </div>
-      </div>
+    <section id="twoSectionId" className="two-section"  ref={ref} style={{ height: '100vh' }}>
+      <ContainerArticles 
+        inView={inView} />
+      <ContainerImg />
       <article className="article_text">
         <header className="header_text">
             <span className="span_text">          

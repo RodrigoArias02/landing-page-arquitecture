@@ -21,6 +21,7 @@
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    white-space: nowrap;
     color: rgb(136, 87, 45);
 }
 .flex-images{

@@ -4,6 +4,7 @@
     flex-direction: column;
     background: rgb(223, 187, 155);
     text-align: center;
+  
 }
 .section-three h2{
     font-size: 3.6em;
@@ -12,6 +13,7 @@
     display: flex;
     justify-content: space-evenly;
     margin: 60px 0px;
+    flex-wrap: wrap;
 }
 .article-feature{
     display: flex;
@@ -35,4 +37,21 @@
 }
 .img-container img{
     width: 100%;
+}
+
+@media screen and (max-width: 1100px){
+    .section-three h2{
+        font-size: 3em;
+    }
+
+    .article-feature{
+        margin: 20px 0px;
+    }
+    .img-container{
+        width: 150px;
+        padding: 20px;
+    }
+    .article-feature p{
+        font-size: 1.6rem;
+    }
 }

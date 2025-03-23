@@ -6,8 +6,8 @@
     margin-bottom: 20px;
     background-color: rgb(255, 255, 255);
     position: absolute;
-    overflow: hidden;
     padding-left:80px ;
+    z-index: 3;
 }
 .header h1{
     margin: 0px;
@@ -31,4 +31,41 @@
     color: black;
     text-decoration: none;
     font-weight: 600;
+}
+.btn-menu{
+    display: none;
+}
+
+
+@media screen and (max-width: 1100px){
+    .header{
+        justify-content: space-between;
+        align-items: center;
+        padding-left: 10px;
+    }
+    .header-nav{
+        padding: 0px;
+        position: absolute;
+        width: 100%;
+        right: 0;
+        transform: translateY(-100%);
+        background: white;
+        transition: transform 0.3s ease-in-out;    }
+    .nav-ul_list{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .btn-menu{
+        display: block;
+        width: fit-content;
+        height: fit-content;
+        background: transparent;
+        border: none;
+    }
+    .menu img{
+        width: 40px;
+    }
+}
+.show{
+    transform: translateY(63%);
 }

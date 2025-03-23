@@ -9,9 +9,6 @@
     background-size: cover;
     padding: 10% 0px;
     color: white;
-
-    -webkit-box-shadow: inset 0px -139px 32px -7px rgba(0,0,0,0.83);
-    -moz-box-shadow: inset 0px -139px 32px -7px rgba(0,0,0,0.83);
     box-shadow: inset 0px -139px 32px -7px rgba(0,0,0,0.83);
 }
 
