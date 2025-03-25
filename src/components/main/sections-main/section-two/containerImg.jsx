@@ -1,5 +1,4 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
 import homeInterior from "../../../../assets/interiorcasa.webp";
 import modularKitchen from "../../../../assets/cocinamodular.jpg";
 import modularForniture from "../../../../assets/forniture.jpg";
@@ -12,30 +11,16 @@ const images = [
   { src: modularForniture, text: "Modular Furniture" },
   { src: modularDecoration, text: "Furniture & Decor" },
 ];
-const InViewImage = ({ src, text }) => {
-  const { ref, inView } = useInView({
-    triggerOnce: true, // Solo activa la animación una vez
-    threshold: 0.3, // El 30% del contenedor debe estar visible para activar la animación
-  });
 
-  console.log(inView);
-  return (
-    <div
-      ref={ref}
-      className={`div_cards-image ${inView ? "animar" : ""}`}
-    >
-      <img src={src} alt={text} />
-      <p>{text}</p>
-      <div className="shadow"></div>
-    </div>
-  );
-};
-
-const ContainerImg = () => {
+const ContainerImg = ({inView}) => {
   return (
     <div className="div_container-images">
       {images.map((image, index) => (
-        <InViewImage key={index} src={image.src} text={image.text} />
+    <div key={index} className={`div_cards-image ${inView ? "animar" : ""}`}>
+    <img  src={image.src} alt={image.text} />
+    <p>{image.text}</p>
+    <div className="shadow"></div>
+  </div>
       ))}
     </div>
   );

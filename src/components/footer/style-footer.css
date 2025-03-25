@@ -48,3 +48,18 @@ address{
     text-align: center;
     background: rgb(76, 36, 1);
 }
+@media screen and (max-width: 358px){
+    .footer-section{
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+    .address{
+        gap: 20px;
+    }
+    .address-item{
+        gap: 5px;
+    }
+    .address h6{
+        text-align: center;
+    }
+}

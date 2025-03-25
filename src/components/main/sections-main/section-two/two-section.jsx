@@ -2,6 +2,7 @@ import "./style-two.css";
 import { useInView } from "react-intersection-observer";
 import ContainerImg from "./containerImg.jsx";
 import ContainerArticles from "./containerArticles.jsx";
+import ContainerTexts from "./containerText.jsx";
 const TwoSection = () => {
     // Hook de intersection observer
     const { ref, inView } = useInView({
@@ -9,38 +10,11 @@ const TwoSection = () => {
       threshold: 0.2, // El 20% del contenedor debe estar visible para activar la animación
     });
   return (
-    <section id="twoSectionId" className="two-section"  ref={ref} style={{ height: '100vh' }}>
+    <section id="twoSectionId" className="two-section"  ref={ref}>
       <ContainerArticles 
         inView={inView} />
-      <ContainerImg />
-      <article className="article_text">
-        <header className="header_text">
-            <span className="span_text">          
-                <h3>Categories</h3>
-            <h4>Architecture Interior</h4>
-            </span>
-
-        </header>
-        <section className="content_text">
-          <p>
-            La arquitectura de interiores es una disciplina que fusiona el
-            diseño arquitectónico con la decoración para transformar los
-            espacios en entornos funcionales, estéticos y armoniosos. Su
-            propósito no es solo embellecer, sino también optimizar el uso del
-            espacio, garantizando comodidad, eficiencia y una atmósfera que se
-            adapte a las necesidades y preferencias de quienes lo habitan.
-          </p>
-          <p>
-            Este campo abarca diversos aspectos fundamentales, como la
-            distribución del espacio, asegurando una organización fluida y
-            práctica; la iluminación, que influye en la percepción y el estado
-            de ánimo dentro del ambiente; y la selección de materiales y
-            texturas, que aportan personalidad y carácter a cada diseño. Además,
-            integra elementos decorativos y mobiliario con criterios ergonómicos
-            y estéticos, equilibrando la funcionalidad con el atractivo visual.
-          </p>
-        </section>
-      </article>
+      <ContainerImg inView={inView} />
+      <ContainerTexts />
     </section>
   );
 };
