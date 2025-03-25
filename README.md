@@ -38,7 +38,3 @@ Este proyecto es una landing page desarrollada con **React** y **Vite**, enfocad
 ## Contribución
 
 Si deseas contribuir, puedes hacer un **fork** del proyecto, crear una rama con tu funcionalidad y luego realizar un **pull request**.
-
-## Licencia
-
-Este proyecto está bajo la licencia [MIT](LICENSE).
