@@ -21,8 +21,8 @@ Este proyecto es una landing page desarrollada con **React** y **Vite**, enfocad
 
 1. Clonar el repositorio:
    ```bash
-   git clone <URL_DEL_REPOSITORIO>
-   cd nombre-del-proyecto
+   git clone https://github.com/RodrigoArias02/landing-page-arquitecture
+   cd landing-page-arquitecture
    ```
 
 2. Instalar dependencias:
